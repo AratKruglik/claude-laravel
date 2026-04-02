@@ -1,5 +1,10 @@
 {
-    "enabledMcpjsonServers": ["laravel-boost", "context7", "figma", "github"],
+  "enabledMcpjsonServers": [
+    "laravel-boost",
+    "context7",
+    "figma",
+    "github"
+  ],
   "permissions": {
     "deny": [
       "Read(./.env)"

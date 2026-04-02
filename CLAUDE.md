@@ -1,5 +1,3 @@
-# Claude Instructions (Index)
-
 ## Claude-Specific Behavior
 
 - Use available Skills for Laravel code style, testing, architecture, Inertia, DevOps
@@ -43,17 +41,7 @@
 - `architecture.md` — Actions pattern, Inertia.js, domain organization, database patterns
 - `testing.md` — Pest 4, mutation testing, model testing policy, test structure
 - `git-operations.md` — Commit/push rules, PR description format
-- `workflow.md` — Agent pipeline: BA → Developer → Security → QA → Tester → DocsWriter
-
-# AI Agent Guidelines
-
-This file contains canonical development guidelines for ALL AI coding assistants
-used in this repository (Copilot, Codex, Gemini, Claude, others).
-
-If you are an AI agent:
-
-- Read this file before suggesting code
-- Follow these rules unless explicitly instructed otherwise
+- `workflow.md` — Agent pipeline: BA → Developer → Tester → Security → QA → DocsWriter
 
 ## Build/Configuration Instructions
 

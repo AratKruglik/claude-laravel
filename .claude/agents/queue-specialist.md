@@ -58,7 +58,7 @@ namespace App\Jobs;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
 
-class SendProjectNotification implements ShouldQueue
+class SendPostNotification implements ShouldQueue
 {
     use Queueable;
 
@@ -68,13 +68,13 @@ class SendProjectNotification implements ShouldQueue
 
     public function __construct(
         private readonly int $userId,
-        private readonly int $projectId,
+        private readonly int $postId,
     ) {}
 
     public function handle(): void
     {
         $user = User::query()->findOrFail($this->userId);
-        $project = Project::query()->findOrFail($this->projectId);
+        $post = Post::query()->findOrFail($this->postId);
 
         // Business logic here
     }
@@ -83,7 +83,7 @@ class SendProjectNotification implements ShouldQueue
     {
         logger()->error('Notification job failed', [
             'userId' => $this->userId,
-            'projectId' => $this->projectId,
+            'postId' => $this->postId,
             'error' => $exception->getMessage(),
         ]);
     }
@@ -97,21 +97,21 @@ class SendProjectNotification implements ShouldQueue
 
 declare(strict_types=1);
 
-namespace App\Actions\Projects;
+namespace App\Actions\Posts;
 
-use App\Jobs\SendProjectNotification;
+use App\Jobs\SendPostNotification;
 use Lorisleiva\Actions\Concerns\AsObject;
 
-class NotifyProjectMembers
+class NotifyPostSubscribers
 {
     use AsObject;
 
-    public function handle(Project $project): void
+    public function handle(Post $post): void
     {
-        $project->members()->each(function ($member) use ($project): void {
-            SendProjectNotification::dispatch(
-                $member->getKey(),
-                $project->getKey(),
+        $post->subscribers()->each(function ($subscriber) use ($post): void {
+            SendPostNotification::dispatch(
+                $subscriber->getKey(),
+                $post->getKey(),
             );
         });
     }
@@ -154,7 +154,7 @@ public function handle(): void
 {
     $notification = Notification::query()
         ->where('user_id', $this->userId)
-        ->where('project_id', $this->projectId)
+        ->where('post_id', $this->postId)
         ->where('type', 'enrollment')
         ->first();
 

@@ -38,7 +38,7 @@ Where to test model functionality instead:
 
 ```
 tests/
-├── Feature/          # Integration tests (Auth, Projects, Pages)
+├── Feature/          # Integration tests (Auth, Posts, Pages)
 ├── Unit/             # Unit tests (Actions, Models, Observers, Support)
 ├── Pest.php          # Pest configuration
 └── TestCase.php      # Base test case

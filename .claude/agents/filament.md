@@ -1,6 +1,6 @@
 ---
 name: filament
-description: "Filament v4 admin panel specialist. Use for creating and editing Filament resources, admin pages, tables, forms, widgets, dashboards, and testing admin functionality with Livewire. NOT for Inertia frontend (developer) or unit tests without Filament (tester).\n\nTrigger words — EN: filament, admin panel, admin resource, admin page, admin table, admin form, admin widget, admin dashboard, resource table, resource form, bulk action, table filter, table column, admin test, livewire test, admin CRUD.\nTrigger words — UA: філамент, адмінка, адмін панель, адмін ресурс, адмін сторінка, адмін таблиця, адмін форма, адмін віджет, адмін дашборд, фільтр таблиці, колонка таблиці, тест адмінки, панель управління, адміністрування, ресурс адмінки, віджет адмінки, bulk action, налаштувати дашборд, форма в адмінці, навігація адмінки, сторінка адмінки, CRUD в адмінці, екшн адмінки, інфоліст.\n\nExamples:\n\n<example>\nContext: User needs a new Filament resource.\nuser: \"Create a Filament resource for Projects\" / \"Створи ресурс для проєктів в адмінці\"\nassistant: \"I'll use the filament agent to create a Project resource with table, form, and pages following the project's Filament v4 conventions.\"\n<commentary>\nFilament resource creation with proper v4 structure is this agent's core competency.\n</commentary>\n</example>\n\n<example>\nContext: User wants to add filters to admin table.\nuser: \"Add filters to the users table in admin\" / \"Додай фільтри в таблицю користувачів в адмінці\"\nassistant: \"I'll use the filament agent to add table filters to the UsersTable class with proper Filament v4 filter components.\"\n<commentary>\nTable customization in Filament requires specialized v4 knowledge.\n</commentary>\n</example>\n\n<example>\nContext: User wants admin dashboard widgets.\nuser: \"Створи дашборд зі статистикою проєктів\"\nassistant: \"I'll use the filament agent to create dashboard widgets with stats overview and chart components.\"\n<commentary>\nFilament widgets for dashboards are an admin panel specialty.\n</commentary>\n</example>\n\n<example>\nContext: User needs tests for admin resource.\nuser: \"Write tests for UserResource\" / \"Напиши тести для ресурсу користувачів\"\nassistant: \"I'll use the filament agent to write Livewire-based tests for UserResource covering CRUD, filters, and actions.\"\n<commentary>\nFilament tests use Livewire::test() assertions — specialized knowledge required.\n</commentary>\n</example>\n\n<example>\nContext: User wants form customization in admin.\nuser: \"Додай вкладки у форму редагування в адмінці\"\nassistant: \"I'll use the filament agent to add Tabs layout to the edit form using Filament v4 Schemas\\Components.\"\n<commentary>\nForm layout with v4 Schemas namespace is Filament-specific.\n</commentary>\n</example>"
+description: "Filament v4 admin panel specialist. Use for creating and editing Filament resources, admin pages, tables, forms, widgets, dashboards, and testing admin functionality with Livewire. NOT for Inertia frontend (developer) or unit tests without Filament (tester).\n\nTrigger words — EN: filament, admin panel, admin resource, admin page, admin table, admin form, admin widget, admin dashboard, resource table, resource form, bulk action, table filter, table column, admin test, livewire test, admin CRUD.\nTrigger words — UA: філамент, адмінка, адмін панель, адмін ресурс, адмін сторінка, адмін таблиця, адмін форма, адмін віджет, адмін дашборд, фільтр таблиці, колонка таблиці, тест адмінки, панель управління, адміністрування, ресурс адмінки, віджет адмінки, bulk action, налаштувати дашборд, форма в адмінці, навігація адмінки, сторінка адмінки, CRUD в адмінці, екшн адмінки, інфоліст.\n\nExamples:\n\n<example>\nContext: User needs a new Filament resource.\nuser: \"Create a Filament resource for Posts\" / \"Створи ресурс для публікацій в адмінці\"\nassistant: \"I'll use the filament agent to create a Post resource with table, form, and pages following the project's Filament v4 conventions.\"\n<commentary>\nFilament resource creation with proper v4 structure is this agent's core competency.\n</commentary>\n</example>\n\n<example>\nContext: User wants to add filters to admin table.\nuser: \"Add filters to the users table in admin\" / \"Додай фільтри в таблицю користувачів в адмінці\"\nassistant: \"I'll use the filament agent to add table filters to the UsersTable class with proper Filament v4 filter components.\"\n<commentary>\nTable customization in Filament requires specialized v4 knowledge.\n</commentary>\n</example>\n\n<example>\nContext: User wants admin dashboard widgets.\nuser: \"Створи дашборд з статистикою постів\"\nassistant: \"I'll use the filament agent to create dashboard widgets with stats overview and chart components.\"\n<commentary>\nFilament widgets for dashboards are an admin panel specialty.\n</commentary>\n</example>\n\n<example>\nContext: User needs tests for admin resource.\nuser: \"Write tests for UserResource\" / \"Напиши тести для ресурсу користувачів\"\nassistant: \"I'll use the filament agent to write Livewire-based tests for UserResource covering CRUD, filters, and actions.\"\n<commentary>\nFilament tests use Livewire::test() assertions — specialized knowledge required.\n</commentary>\n</example>\n\n<example>\nContext: User wants form customization in admin.\nuser: \"Додай вкладки у форму редагування в адмінці\"\nassistant: \"I'll use the filament agent to add Tabs layout to the edit form using Filament v4 Schemas\\Components.\"\n<commentary>\nForm layout with v4 Schemas namespace is Filament-specific.\n</commentary>\n</example>"
 model: opus
 color: yellow
 ---
@@ -160,33 +160,33 @@ beforeEach(function (): void {
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources\Project;
+namespace App\Filament\Resources\Post;
 
-use App\Models\Project;
+use App\Models\Post;
 use Filament\Resources\Resource;
 
-class ProjectResource extends Resource
+class PostResource extends Resource
 {
-    protected static ?string $model = Project::class;
+    protected static ?string $model = Post::class;
 
-    protected static ?string $navigationIcon = Heroicon::Briefcase;
+    protected static ?string $navigationIcon = Heroicon::AcademicCap;
 
     public static function form(Form $form): Form
     {
-        return $form->schema(ProjectForm::schema());
+        return $form->schema(PostForm::schema());
     }
 
     public static function table(Table $table): Table
     {
-        return $table->configure(ProjectsTable::configure());
+        return $table->configure(PostsTable::configure());
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => ListProjects::route('/'),
-            'create' => CreateProject::route('/create'),
-            'edit' => EditProject::route('/{record}/edit'),
+            'index' => ListPosts::route('/'),
+            'create' => CreatePost::route('/create'),
+            'edit' => EditPost::route('/{record}/edit'),
         ];
     }
 }

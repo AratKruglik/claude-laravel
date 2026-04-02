@@ -1,0 +1,9 @@
+{
+    "enabledMcpjsonServers": ["laravel-boost", "context7", "figma", "github"],
+  "permissions": {
+    "deny": [
+      "Read(./.env)"
+    ]
+  },
+  "model": "opusplan"
+}

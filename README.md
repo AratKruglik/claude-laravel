@@ -161,7 +161,7 @@ npx skills add <owner/repo> -a claude-code
 The main instructions file. Adapt this to your project:
 
 1. Update system requirements if your stack differs
-2. Adjust Docker commands to match your `docker-compose.yml`
+2. Adjust Docker commands to match your `compose.yml`
 3. Add project-specific rules in the "Core Principles" section
 4. Modify the agent list if you add/remove agents
 

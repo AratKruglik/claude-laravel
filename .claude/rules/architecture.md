@@ -9,7 +9,7 @@
 ## Frontend
 
 - **Inertia.js** with Vue.js — frontend built as SPA via server-driven routing
-- **Domain Organization**: features organized by domain (Auth, Projects, Events, etc.)
+- **Domain Organization**: features organized by domain (Auth, Posts, Categories, etc.)
 
 ## Database
 

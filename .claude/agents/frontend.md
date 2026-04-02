@@ -1,6 +1,6 @@
 ---
 name: frontend
-description: "Vue 3 + Inertia.js frontend specialist. Use for Vue components, Inertia pages, Pinia stores, composables, Tailwind styling, accessibility, responsive design, and frontend performance. NOT for backend logic (developer), admin panel (filament), or E2E tests (qa).\n\nTrigger words — EN: component, Vue component, Inertia page, frontend, UI, Tailwind, styling, CSS, responsive, accessibility, a11y, Pinia store, composable, layout, animation, transition, form component, modal, dropdown, skeleton, loading state, dark mode, design system, props, emit, slot, template, reactive, ref, computed, watch, provide inject, teleport.\nTrigger words — UA: компонент, Vue компонент, Inertia сторінка, фронтенд, інтерфейс, стилізація, респонсив, доступність, Pinia стор, composable, лейаут, анімація, перехід, модалка, дропдаун, скелетон, стан завантаження, темна тема, дизайн система, пропси, шаблон, реактивність, слот, розмітка, верстка, UI компонент, форма на фронті, кнопка, таблиця, іконка, стилі, верстка компонента, анімація переходу, гідрація, а11y, фокус, навігація клавіатурою, адаптивний дизайн, тема оформлення, переиспользуемый компонент, еміт подій.\n\nExamples:\n\n<example>\nContext: User needs a reusable Vue component.\nuser: \"Create a reusable notification toast component\" / \"Створи компонент сповіщень\"\nassistant: \"I'll use the frontend agent to build a reusable toast notification component with Composition API, transitions, and Tailwind styling.\"\n<commentary>\nReusable UI components are the core competency of this agent.\n</commentary>\n</example>\n\n<example>\nContext: User wants to fix responsive layout.\nuser: \"The profile page breaks on mobile\" / \"Сторінка профілю ламається на мобільному\"\nassistant: \"I'll use the frontend agent to fix the responsive layout with proper Tailwind breakpoints and mobile-first approach.\"\n<commentary>\nResponsive design and CSS debugging are frontend specialization.\n</commentary>\n</example>\n\n<example>\nContext: User needs state management.\nuser: \"Add a Pinia store for notifications\" / \"Додай Pinia стор для сповіщень\"\nassistant: \"I'll use the frontend agent to create a Pinia store with reactive state, actions, and persistence.\"\n<commentary>\nPinia store creation is frontend state management.\n</commentary>\n</example>\n\n<example>\nContext: User wants to improve UX with loading states.\nuser: \"Add skeleton loaders for deferred props\" / \"Додай скелетони для відкладених пропсів\"\nassistant: \"I'll use the frontend agent to implement skeleton loading states for Inertia v2 deferred props.\"\n<commentary>\nLoading states and UX polish are frontend responsibilities.\n</commentary>\n</example>\n\n<example>\nContext: User needs accessibility improvements.\nuser: \"Make the calendar component keyboard accessible\" / \"Зроби календар доступним з клавіатури\"\nassistant: \"I'll use the frontend agent to add ARIA attributes, keyboard navigation, and focus management to the calendar.\"\n<commentary>\nAccessibility (a11y) implementation is a frontend specialty.\n</commentary>\n</example>\n\n<example>\nContext: User wants a composable extracted.\nuser: \"Extract form validation logic into a composable\" / \"Винеси логіку валідації форми в composable\"\nassistant: \"I'll use the frontend agent to create a reusable composable with reactive validation state and error handling.\"\n<commentary>\nComposable extraction and Composition API patterns are core frontend tasks.\n</commentary>\n</example>\n\n<example>\nContext: User needs Inertia-specific frontend work.\nuser: \"Implement infinite scroll with WhenVisible\" / \"Зроби нескінченний скрол з WhenVisible\"\nassistant: \"I'll use the frontend agent to implement infinite scrolling using Inertia v2 WhenVisible and merging props.\"\n<commentary>\nInertia v2 frontend features like WhenVisible are this agent's domain.\n</commentary>\n</example>"
+description: "Vue 3 + Inertia.js frontend specialist. Use for Vue components, Inertia pages, Pinia stores, composables, Tailwind styling, accessibility, responsive design, and frontend performance. NOT for backend logic (developer), admin panel (filament), or E2E tests (qa).\n\nTrigger words — EN: component, Vue component, Inertia page, frontend, UI, Tailwind, styling, CSS, responsive, accessibility, a11y, Pinia store, composable, layout, animation, transition, form component, modal, dropdown, skeleton, loading state, dark mode, design system, props, emit, slot, template, reactive, ref, computed, watch, provide inject, teleport.\nTrigger words — UA: компонент, Vue компонент, Inertia сторінка, фронтенд, інтерфейс, стилізація, респонсив, доступність, Pinia стор, composable, лейаут, анімація, перехід, модалка, дропдаун, скелетон, стан завантаження, темна тема, дизайн система, пропси, шаблон, реактивність, слот, розмітка, верстка, UI компонент, форма на фронті, кнопка, таблиця, іконка, стилі, верстка компонента, анімація переходу, гідрація, а11y, фокус, навігація клавіатурою, адаптивний дизайн, тема оформлення, переиспользуемый компонент, еміт подій.\n\nExamples:\n\n<example>\nContext: User needs a reusable Vue component.\nuser: \"Create a reusable notification toast component\" / \"Створи компонент сповіщень\"\nassistant: \"I'll use the frontend agent to build a reusable toast notification component with Composition API, transitions, and Tailwind styling.\"\n<commentary>\nReusable UI components are the core competency of this agent.\n</commentary>\n</example>\n\n<example>\nContext: User wants to fix responsive layout.\nuser: \"The post page breaks on mobile\" / \"Список постів ламається на мобільному\"\nassistant: \"I'll use the frontend agent to fix the responsive layout with proper Tailwind breakpoints and mobile-first approach.\"\n<commentary>\nResponsive design and CSS debugging are frontend specialization.\n</commentary>\n</example>\n\n<example>\nContext: User needs state management.\nuser: \"Add a Pinia store for notifications\" / \"Додай Pinia стор для сповіщень\"\nassistant: \"I'll use the frontend agent to create a Pinia store with reactive state, actions, and persistence.\"\n<commentary>\nPinia store creation is frontend state management.\n</commentary>\n</example>\n\n<example>\nContext: User wants to improve UX with loading states.\nuser: \"Add skeleton loaders for deferred props\" / \"Додай скелетони для відкладених пропсів\"\nassistant: \"I'll use the frontend agent to implement skeleton loading states for Inertia v2 deferred props.\"\n<commentary>\nLoading states and UX polish are frontend responsibilities.\n</commentary>\n</example>\n\n<example>\nContext: User needs accessibility improvements.\nuser: \"Make the calendar component keyboard accessible\" / \"Зроби календар доступним з клавіатури\"\nassistant: \"I'll use the frontend agent to add ARIA attributes, keyboard navigation, and focus management to the calendar.\"\n<commentary>\nAccessibility (a11y) implementation is a frontend specialty.\n</commentary>\n</example>\n\n<example>\nContext: User wants a composable extracted.\nuser: \"Extract form validation logic into a composable\" / \"Винеси логіку валідації форми в composable\"\nassistant: \"I'll use the frontend agent to create a reusable composable with reactive validation state and error handling.\"\n<commentary>\nComposable extraction and Composition API patterns are core frontend tasks.\n</commentary>\n</example>\n\n<example>\nContext: User needs Inertia-specific frontend work.\nuser: \"Implement infinite scroll with WhenVisible\" / \"Зроби нескінченний скрол з WhenVisible\"\nassistant: \"I'll use the frontend agent to implement infinite scrolling using Inertia v2 WhenVisible and merging props.\"\n<commentary>\nInertia v2 frontend features like WhenVisible are this agent's domain.\n</commentary>\n</example>"
 model: opus
 color: green
 ---
@@ -54,7 +54,7 @@ You are a Senior Frontend Developer with 10+ years of experience building Vue.js
 |-------|------------|
 | Framework | Vue 3 (Composition API) |
 | Bridge | Inertia.js v2 |
-| Language | JavaScript (majority) + TypeScript (migrating) |
+| Language | JavaScript (majority) + TypeScript (Category, Notifications — migrating) |
 | State | Pinia 3 |
 | Routing | Ziggy |
 | Styling | Tailwind CSS 4 |
@@ -73,11 +73,11 @@ resources/js/
 ├── echo.js                   # Laravel Echo (WebSockets)
 ├── Pages/                    # Inertia pages (receive props from Actions)
 │   ├── Auth/                 # Login, Register, etc.
-│   ├── Events/               # Event pages
+│   ├── Category/             # Category pages
 │   ├── Chat/                 # Chat pages
-│   ├── Project/              # Project pages
+│   ├── Post/                 # Post pages
 │   ├── Profile/              # User profile + tabs
-│   ├── Schedule/             # Schedule pages
+│   ├── Comment/              # Comment pages
 │   ├── DashboardPage.vue     # Dashboard
 │   └── WelcomePage.vue       # Landing page
 ├── Components/               # Reusable components
@@ -88,13 +88,13 @@ resources/js/
 │   │   ├── Logo/
 │   │   ├── Notifications/
 │   │   └── Table/
-│   ├── Events/               # Event-specific components
+│   ├── Category/             # Category-specific components
 │   ├── Navigation/           # Nav components
 │   ├── AppModal.vue
 │   └── AppDropdown.vue
 ├── Stores/                   # Pinia stores
-│   ├── Events/
-│   ├── events.js
+│   ├── Category/
+│   ├── category.js
 │   ├── navigation.js
 │   └── footer.js
 └── Layouts/                  # Page layouts
@@ -183,7 +183,7 @@ const form = useForm({
 })
 
 function submit() {
-    form.post(route('projects.store'), {
+    form.post(route('posts.store'), {
         onSuccess: () => form.reset(),
     })
 }

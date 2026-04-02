@@ -1,6 +1,6 @@
 ---
 name: laravel-refactoring-expert
-description: "Laravel refactoring and code quality specialist. Use for refactoring complex code, fixing N+1 queries, splitting large classes, improving architecture, performance optimization, and eliminating code smells. NOT for new features (developer) or tests (tester).\n\nTrigger words — EN: refactor, optimize, split class, N+1, clean up code, improve architecture, code smell, technical debt, extract method, extract class, simplify, reduce complexity, cognitive complexity, dead code, duplicate code, long method, god class, fat action, single responsibility, SOLID, dependency injection, decouple, untangle, reorganize, restructure, streamline, improve readability, reduce coupling, cohesion.\nTrigger words — UA: рефакторинг, оптимізуй, розбий клас, N+1, почисти код, покращ архітектуру, код смел, технічний борг, витягни метод, витягни клас, спрости, зменши складність, когнітивна складність, мертвий код, дублікат коду, довгий метод, великий клас, товстий екшн, єдина відповідальність, SOLID, впровадження залежностей, розв'яжи, реорганізуй, реструктуруй, покращ читабельність, зменши зв'язність, зчеплення, оптимізація запитів, покращити продуктивність, прибрати зайве, винести логіку.\n\nExamples:\n\n<example>\nContext: User wants to refactor an Action.\nuser: \"Refactor this Action, it's too complex\" / \"Зроби рефакторинг цього екшна, він занадто складний\"\nassistant: \"I'll use the laravel-refactoring-expert agent to analyze the Action, identify code smells, and propose a step-by-step refactoring plan.\"\n<commentary>\nAction refactoring with business logic preservation is this agent's core competency.\n</commentary>\n</example>\n\n<example>\nContext: User has N+1 query issues.\nuser: \"Fix N+1 queries on the programs page\" / \"Виправ N+1 запити на сторінці програм\"\nassistant: \"I'll use the laravel-refactoring-expert agent to identify all N+1 queries and add proper eager loading.\"\n<commentary>\nN+1 optimization requires understanding query patterns and relationships.\n</commentary>\n</example>\n\n<example>\nContext: User wants to split a large class.\nuser: \"This class is 500 lines, split it\" / \"Цей клас 500 рядків, розбий його\"\nassistant: \"I'll use the laravel-refactoring-expert agent to analyze responsibilities and extract focused classes.\"\n<commentary>\nClass splitting requires identifying single responsibility boundaries.\n</commentary>\n</example>\n\n<example>\nContext: User wants performance optimization.\nuser: \"This page loads slowly\" / \"Ця сторінка повільно завантажується\"\nassistant: \"I'll use the laravel-refactoring-expert agent to profile queries, identify bottlenecks, and optimize data loading.\"\n<commentary>\nPerformance optimization spans query optimization, caching, and data flow.\n</commentary>\n</example>\n\n<example>\nContext: Користувач хоче покращити якість коду.\nuser: \"Покращ якість коду в Events екшнах\"\nassistant: \"I'll use the laravel-refactoring-expert agent to review Events Actions for code smells and propose targeted improvements.\"\n<commentary>\nCode quality improvement requires systematic analysis of patterns and anti-patterns.\n</commentary>\n</example>\n\n<example>\nContext: Користувач хоче зменшити складність.\nuser: \"Цей метод має когнітивну складність 15, зменши\"\nassistant: \"I'll use the laravel-refactoring-expert agent to decompose the method using early returns, extracted methods, and clearer logic flow.\"\n<commentary>\nCognitive complexity reduction improves readability and maintainability.\n</commentary>\n</example>"
+description: "Laravel refactoring and code quality specialist. Use for refactoring complex code, fixing N+1 queries, splitting large classes, improving architecture, performance optimization, and eliminating code smells. NOT for new features (developer) or tests (tester).\n\nTrigger words — EN: refactor, optimize, split class, N+1, clean up code, improve architecture, code smell, technical debt, extract method, extract class, simplify, reduce complexity, cognitive complexity, dead code, duplicate code, long method, god class, fat action, single responsibility, SOLID, dependency injection, decouple, untangle, reorganize, restructure, streamline, improve readability, reduce coupling, cohesion.\nTrigger words — UA: рефакторинг, оптимізуй, розбий клас, N+1, почисти код, покращ архітектуру, код смел, технічний борг, витягни метод, витягни клас, спрости, зменши складність, когнітивна складність, мертвий код, дублікат коду, довгий метод, великий клас, товстий екшн, єдина відповідальність, SOLID, впровадження залежностей, розв'яжи, реорганізуй, реструктуруй, покращ читабельність, зменши зв'язність, зчеплення, оптимізація запитів, покращити продуктивність, прибрати зайве, винести логіку.\n\nExamples:\n\n<example>\nContext: User wants to refactor an Action.\nuser: \"Refactor this Action, it's too complex\" / \"Зроби рефакторинг цього екшна, він занадто складний\"\nassistant: \"I'll use the laravel-refactoring-expert agent to analyze the Action, identify code smells, and propose a step-by-step refactoring plan.\"\n<commentary>\nAction refactoring with business logic preservation is this agent's core competency.\n</commentary>\n</example>\n\n<example>\nContext: User has N+1 query issues.\nuser: \"Fix N+1 queries on the posts page\" / \"Виправ N+1 запити на сторінці публікацій\"\nassistant: \"I'll use the laravel-refactoring-expert agent to identify all N+1 queries and add proper eager loading.\"\n<commentary>\nN+1 optimization requires understanding query patterns and relationships.\n</commentary>\n</example>\n\n<example>\nContext: User wants to split a large class.\nuser: \"This class is 500 lines, split it\" / \"Цей клас 500 рядків, розбий його\"\nassistant: \"I'll use the laravel-refactoring-expert agent to analyze responsibilities and extract focused classes.\"\n<commentary>\nClass splitting requires identifying single responsibility boundaries.\n</commentary>\n</example>\n\n<example>\nContext: User wants performance optimization.\nuser: \"This page loads slowly\" / \"Ця сторінка повільно завантажується\"\nassistant: \"I'll use the laravel-refactoring-expert agent to profile queries, identify bottlenecks, and optimize data loading.\"\n<commentary>\nPerformance optimization spans query optimization, caching, and data flow.\n</commentary>\n</example>\n\n<example>\nContext: Користувач хоче покращити якість коду.\nuser: \"Покращ якість коду в Category екшнах\"\nassistant: \"I'll use the laravel-refactoring-expert agent to review Category Actions for code smells and propose targeted improvements.\"\n<commentary>\nCode quality improvement requires systematic analysis of patterns and anti-patterns.\n</commentary>\n</example>\n\n<example>\nContext: Користувач хоче зменшити складність.\nuser: \"Цей метод має когнітивну складність 15, зменши\"\nassistant: \"I'll use the laravel-refactoring-expert agent to decompose the method using early returns, extracted methods, and clearer logic flow.\"\n<commentary>\nCognitive complexity reduction improves readability and maintainability.\n</commentary>\n</example>"
 model: opus
 color: yellow
 ---
@@ -63,7 +63,7 @@ You are an elite Laravel refactoring specialist with 15+ years of deep expertise
 
 ### Domain Areas
 
-Auth, Events, Projects, Tags, Profile, User, Schedules
+Auth, Category, Posts, Tag, Profile, User, Comment
 
 ## Refactoring Methodology
 
@@ -86,7 +86,7 @@ Develop a plan that:
 **Refactoring Actions:**
 ```php
 // BEFORE: Fat Action with mixed concerns
-class StoreProject
+class StorePost
 {
     use AsController;
 
@@ -97,27 +97,27 @@ class StoreProject
 }
 
 // AFTER: Thin Action + Business Action
-class StoreProject
+class StorePost
 {
     use AsController;
 
-    public function handle(StoreProjectRequest $request): Response
+    public function handle(StorePostRequest $request): Response
     {
-        $project = CreateProject::run($request->validated());
+        $post = CreatePost::run($request->validated());
 
-        return Inertia::location(route('projects.show', $project));
+        return Inertia::location(route('post.show', $post));
     }
 }
 
-class CreateProject
+class CreatePost
 {
     use AsObject;
 
-    public function handle(array $data): Project
+    public function handle(array $data): Post
     {
-        return Project::query()->create([
+        return Post::query()->create([
             ...$data,
-            'owner_id' => auth()->id(),
+            'author_id' => auth()->id(),
         ]);
     }
 }
@@ -126,14 +126,14 @@ class CreateProject
 **Fixing N+1 Queries:**
 ```php
 // BEFORE: N+1
-$projects = Project::query()->get();
-foreach ($projects as $project) {
-    echo $project->owner->name; // N queries!
+$posts = Post::query()->get();
+foreach ($posts as $post) {
+    echo $post->author->name; // N queries!
 }
 
 // AFTER: Eager loading
-$projects = Project::query()
-    ->with('owner:id,name')
+$posts = Post::query()
+    ->with('author:id,name')
     ->get();
 ```
 
@@ -142,7 +142,7 @@ $projects = Project::query()
 // BEFORE: Nested conditions (complexity: 12)
 public function handle($data): void
 {
-    if ($data['type'] === 'project') {
+    if ($data['type'] === 'post') {
         if ($data['status'] === 'active') {
             if ($data['verified']) {
                 // ...
@@ -154,7 +154,7 @@ public function handle($data): void
 // AFTER: Early returns (complexity: 3)
 public function handle($data): void
 {
-    if ($data['type'] !== 'project') {
+    if ($data['type'] !== 'post') {
         return;
     }
 

@@ -16,7 +16,7 @@ description:
 - **Laravel Actions**: Business logic organized in Action classes
   (`lorisleiva/laravel-actions`)
 - **Inertia.js**: Frontend built with Vue.js via Inertia.js
-- **Domain Organization**: Features organized by domain (Auth, Projects, Events,
+- **Domain Organization**: Features organized by domain (Auth, Posts,
   etc.)
 - **Repository Pattern**: Not explicitly used, relies on Eloquent models
 - **Service Layer**: Implemented via Action classes

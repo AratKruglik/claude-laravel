@@ -2,11 +2,12 @@
 
 ## Workflow Orchestration
 
-### 1. Plan Node Default
-- Enter plan mode for ANY non-trivial task (3+ steps or architectural decisions)
+### 1. General Rules
+- Enter **plan mode** for ANY non-trivial task (3+ steps or architectural decisions)
 - If something goes sideways, STOP and re-plan immediately – don't keep pushing
 - Use plan mode for verification steps, not just building
 - Write detailed specs upfront to reduce ambiguity
+- Never mark a task complete without proving it works
 
 ### 2. Subagent Strategy
 - Use subagents liberally to keep main context window clean
@@ -15,7 +16,7 @@
 - One tack per subagent for focused execution
 
 ### 3. Self-Improvement Loop
-- After ANY correction from the user: update `docs/lessons.md` with the pattern
+- After ANY correction from the user: update `./docs/lessons.md` with the pattern
 - Write rules for yourself that prevent the same mistake
 - Ruthlessly iterate on these lessons until mistake rate drops
 - Review lessons at session start for relevant project
@@ -40,12 +41,11 @@
 
 ## Task Management
 
-1. **Plan First**: Write plan to `docs/todo.md` with checkable items
+1. **Plan First**: Write plan to `./docs/todo.md` with checkable items
 2. **Verify Plan**: Check in before starting implementation
 3. **Track Progress**: Mark items complete as you go
 4. **Explain Changes**: High-level summary at each step
-5. **Document Results**: Add review section to `docs/todo.md`
-6. **Capture Lessons**: Update `docs/lessons.md` after corrections
+5. **Document Results**: Add review section to `./docs/todo.md`
 
 ## Core Principles
 
@@ -55,7 +55,17 @@
 
 ## Standard Feature Pipeline
 
-When executing a non-trivial feature task, follow this agent pipeline in order:
+Use this pipeline when the task meets **ANY** of the following criteria:
+- Creates or modifies a Laravel Action class
+- Requires a database migration
+- Adds or changes a route, controller, or Form Request
+- Adds or changes a Vue component or Inertia page
+- Involves authorization logic (Policy, Gate, middleware)
+- Touches more than 2 files
+
+If none apply (e.g. fixing a typo, updating a config value) — skip the pipeline.
+
+Follow this agent pipeline in order:
 
 ### Step 1: Analysis (BA Agent)
 - Analyze the task requirements
@@ -69,28 +79,36 @@ When executing a non-trivial feature task, follow this agent pipeline in order:
 - Run Pint + PHPStan after code changes
 - Output: working code changes
 
-### Step 3: Security Review (Security Scanner Agent)
-- Scan new code for OWASP Top 10 vulnerabilities
-- Check auth/authz (Policies, Form Requests)
-- Verify no credential leaks, no PII in logs
-- Output: security findings with severity ratings
-
-### Step 4: Test Coverage (Tester Agent)
+### Step 3: Test Coverage (Tester Agent)
 - Write unit tests for Actions, Services, Observers
 - Write feature tests for HTTP endpoints
 - Run mutation testing to verify test quality
 - Output: test files, coverage report
 
-### Step 5: E2E Verification (QA Agent)
+### Step 4: Code Review (Reviewer Agent)
+- Review all code changes against project coding standards and architecture
+- Check for logic errors, code smells, SOLID violations, and maintainability issues
+- Classify findings by severity: Critical, Important, Minor
+- **If Critical or Important issues found**: route findings back to Developer Agent (code fixes) and Tester Agent (test gaps) — repeat Steps 2–4 until clean
+- **If only Minor issues or clean**: proceed to next step
+- Output: review report with findings, severity ratings, and resolution status
+
+### Step 5: Security Review (Security Scanner Agent)
+- Scan new code for OWASP Top 10 vulnerabilities
+- Check auth/authz (Policies, Form Requests)
+- Verify no credential leaks, no PII in logs
+- Output: security findings with severity ratings
+
+### Step 6: E2E Verification and Browser Tests(QA Agent)
 - Verify user flows work in browser via Playwright
 - Check responsive design, accessibility
 - Test integration points
 - Output: E2E test results, screenshots if needed
 
-### Step 6: Report & PR (DocsWriter Agent)
+### Step 7: Report & PR (DocsWriter Agent)
 - Write a summary report of all changes made
 - Create PR description (what changed, why, which files)
-- Create the PR automatically via GitHub CLI (`gh pr create`)
+- Create the PR automatically via Github CLI and `gh` command
 - PR description rules: no AI mentions, no stats, no test checklists
 
 ## Architecture Tasks
@@ -111,11 +129,3 @@ For tasks involving CI/CD, Docker, or deployment:
 2. **Developer Agent** — implement fix
 3. **Tester Agent** — write regression test
 4. Verify fix + existing tests pass
-
-## General Rules
-
-- Enter **plan mode** for ANY non-trivial task (3+ steps or architectural decisions)
-- If something goes sideways, STOP and re-plan — don't keep pushing
-- Use subagents liberally to keep main context clean
-- Never mark a task complete without proving it works
-- After ANY user correction: update `docs/lessons.md`

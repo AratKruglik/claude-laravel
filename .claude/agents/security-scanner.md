@@ -41,7 +41,7 @@ You are an elite Application Security Specialist with deep expertise in secure c
 - **CSRF protection**: Enabled via middleware
 
 ### Authorization
-- **Policies**: `EventPolicy`, `ProjectPolicy`, `SchedulePolicy`
+- **Policies**: `CategoryPolicy`, `PostPolicy`, `CommentPolicy`
 - **Role-based access**: Spatie Permission with `RoleEnum`
 - **Form Requests**: Validation + authorization in `authorize()` method
 

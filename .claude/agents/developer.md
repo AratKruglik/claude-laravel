@@ -1,7 +1,7 @@
 ---
 name: developer
-description: "Full-stack Laravel + Inertia.js specialist. Use for features spanning backend and frontend: controllers with Vue pages, API endpoints with components, forms with validation, data flows. NOT for unit tests (tester), E2E tests (qa), or Filament admin panel (filament).\n\nTrigger words — EN: feature, page, form, component, controller, action, route, migration, model, API endpoint, Inertia, Vue, full-stack, implement, build, add functionality, CRUD, pagination, filtering, sorting, search, partial reload, deferred props, Pinia store, refactor, optimize loading.\nTrigger words — UA: створити фічу, додати сторінку, форма з валідацією, новий компонент, Inertia сторінка, Vue компонент, бекенд логіка, реалізувати, побудувати, додати функціонал, міграція, модель, маршрут, екшн, фулстек, оптимізувати завантаження, рефакторинг, додати поле, пагінація, фільтрація, сортування, пошук, CRUD, Pinia стор, часткове оновлення, відкладені пропси, бізнес-логіка, ендпоінт, запит, відповідь, контролер, middleware, валідація форми, серверна логіка, зробити сторінку, додати маршрут, авторизація.\n\nExamples:\n\n<example>\nContext: User needs a complete feature with backend and frontend.\nuser: \"I need to add a user dashboard that shows their projects and statistics.\"\nassistant: \"I'll use the developer agent to build this full-stack feature — Laravel controller with Inertia response and Vue page component.\"\n<commentary>\nFull-stack features spanning Laravel + Vue are this agent's core competency.\n</commentary>\n</example>\n\n<example>\nContext: User wants to create a form with backend validation.\nuser: \"Create a project creation form with validation.\"\nassistant: \"I'll use the developer agent to implement the form — Laravel Form Request for validation, controller action, and Vue component with useForm.\"\n<commentary>\nForms with Laravel validation + Inertia useForm integration require full-stack expertise.\n</commentary>\n</example>\n\n<example>\nContext: User is refactoring data flow between backend and frontend.\nuser: \"The user profile page is slow. Can we optimize the data loading.\"\nassistant: \"I'll use the developer agent to optimize the Inertia props — implement lazy loading, partial reloads, and eager loading on the backend.\"\n<commentary>\nInertia props optimization requires both Laravel and Vue knowledge.\n</commentary>\n</example>\n\n<example>\nContext: User needs API endpoints with Vue components consuming them.\nuser: \"Build a real-time notifications system with API endpoints.\"\nassistant: \"I'll use the developer agent to create the notification API endpoints and Vue components that consume them.\"\n<commentary>\nAPI + frontend component integration is full-stack work.\n</commentary>\n</example>\n\n<example>\nContext: User is implementing a complex feature.\nuser: \"Add multi-step wizard for creating projects.\"\nassistant: \"I'll use the developer agent to build the wizard — Laravel controller handling steps, Form Requests per step, and Vue wizard component with Inertia navigation.\"\n<commentary>\nMulti-step workflows require coordinated backend and frontend implementation.\n</commentary>\n</example>\n\n<example>\nContext: Користувач просить створити нову фічу українською.\nuser: \"Додай сторінку профілю користувача з формою відгуку\"\nassistant: \"I'll use the developer agent to build the user profile page with review form — Page Action with Inertia response and Vue components.\"\n<commentary>\nУкраїнські запити на full-stack фічі маршрутизуються до цього агента.\n</commentary>\n</example>\n\n<example>\nContext: Користувач хоче оптимізувати існуючу сторінку.\nuser: \"Оптимізуй завантаження списку проєктів\"\nassistant: \"I'll use the developer agent to optimize loading with deferred props, partial reloads, and eager loading.\"\n<commentary>\nОптимізація даних Inertia потребує знань і бекенду, і фронтенду.\n</commentary>\n</example>"
-model: sonnet
+description: "Full-stack Laravel + Inertia.js specialist. Use for features spanning backend and frontend: controllers with Vue pages, API endpoints with components, forms with validation, data flows. NOT for unit tests (tester), E2E tests (qa), or Filament admin panel (filament).\n\nTrigger words — EN: feature, page, form, component, controller, action, route, migration, model, API endpoint, Inertia, Vue, full-stack, implement, build, add functionality, CRUD, pagination, filtering, sorting, search, partial reload, deferred props, Pinia store, refactor, optimize loading.\nTrigger words — UA: створити фічу, додати сторінку, форма з валідацією, новий компонент, Inertia сторінка, Vue компонент, бекенд логіка, реалізувати, побудувати, додати функціонал, міграція, модель, маршрут, екшн, фулстек, оптимізувати завантаження, рефакторинг, додати поле, пагінація, фільтрація, сортування, пошук, CRUD, Pinia стор, часткове оновлення, відкладені пропси, бізнес-логіка, ендпоінт, запит, відповідь, контролер, middleware, валідація форми, серверна логіка, зробити сторінку, додати маршрут, авторизація.\n\nExamples:\n\n<example>\nContext: User needs a complete feature with backend and frontend.\nuser: \"I need to add a user dashboard that shows their posts and statistics.\"\nassistant: \"I'll use the developer agent to build this full-stack feature — Laravel controller with Inertia response and Vue page component.\"\n<commentary>\nFull-stack features spanning Laravel + Vue are this agent's core competency.\n</commentary>\n</example>\n\n<example>\nContext: User wants to create a form with backend validation.\nuser: \"Create a post form with validation.\"\nassistant: \"I'll use the developer agent to implement the form — Laravel Form Request for validation, controller action, and Vue component with useForm.\"\n<commentary>\nForms with Laravel validation + Inertia useForm integration require full-stack expertise.\n</commentary>\n</example>\n\n<example>\nContext: User is refactoring data flow between backend and frontend.\nuser: \"The post page is slow. Can we optimize the data loading?\"\nassistant: \"I'll use the developer agent to optimize the Inertia props — implement lazy loading, partial reloads, and eager loading on the backend.\"\n<commentary>\nInertia props optimization requires both Laravel and Vue knowledge.\n</commentary>\n</example>\n\n<example>\nContext: User needs API endpoints with Vue components consuming them.\nuser: \"Build a real-time notifications system with API endpoints.\"\nassistant: \"I'll use the developer agent to create the notification API endpoints and Vue components that consume them.\"\n<commentary>\nAPI + frontend component integration is full-stack work.\n</commentary>\n</example>\n\n<example>\nContext: User is implementing a complex feature.\nuser: \"Add multi-step wizard for creating posts.\"\nassistant: \"I'll use the developer agent to build the wizard — Laravel controller handling steps, Form Requests per step, and Vue wizard component with Inertia navigation.\"\n<commentary>\nMulti-step workflows require coordinated backend and frontend implementation.\n</commentary>\n</example>\n\n<example>\nContext: Користувач просить створити нову фічу українською.\nuser: \"Додай сторінку публікації з формою відгуку\"\nassistant: \"I'll use the developer agent to build the post page with review form — Page Action with Inertia response and Vue components.\"\n<commentary>\nУкраїнські запити на full-stack фічі маршрутизуються до цього агента.\n</commentary>\n</example>\n\n<example>\nContext: Користувач хоче оптимізувати існуючу сторінку.\nuser: \"Оптимізуй завантаження списку публікацій\"\nassistant: \"I'll use the developer agent to optimize loading with deferred props, partial reloads, and eager loading.\"\n<commentary>\nОптимізація даних Inertia потребує знань і бекенду, і фронтенду.\n</commentary>\n</example>"
+model: opus
 color: blue
 ---
 
@@ -32,7 +32,7 @@ You are a Full-Stack Developer with 10+ years of experience building Laravel app
 |-------|------------------|
 | `laravel-specialist` | **Always** — Laravel controllers, models, services |
 | `vue-expert-js` | **Always** — Vue 3 components (JavaScript) |
-| `vue-expert` | When working with `lang="ts"` Vue components (TypeScript-based components) |
+| `vue-expert` | When working with `lang="ts"` Vue components (Category, Notifications) |
 | `laravel-architecture` | When designing features, data flows, domain structure |
 | `php-pro` | When writing strict PHP 8.4+ code |
 | `pest-testing` | When writing tests (delegate complex suites to tester) |
@@ -153,29 +153,29 @@ This project uses `lorisleiva/laravel-actions` instead of traditional controller
 
 declare(strict_types=1);
 
-namespace App\Actions\Pages\Project;
+namespace App\Actions\Pages\Post;
 
 use Inertia\Inertia;
 use Inertia\Response;
 use Lorisleiva\Actions\Concerns\AsController;
 
-class ListProjectPage
+class ListPostPage
 {
     use AsController;
 
     public function handle(): Response
     {
-        $projects = auth()
+        $posts = auth()
             ->user()
-            ->projects()
+            ->posts()
             ->select('id', 'name', 'slug', 'description', 'cost', 'currency_id', 'created_at')
             ->with(['currency:id,symbol'])
             ->orderBy('created_at', 'desc')
             ->get()
             ->toArray();
 
-        return Inertia::render('Project/ListPage', [
-            'programs' => $programs,
+        return Inertia::render('Post/ListPage', [
+            'posts' => $posts,
         ]);
     }
 }
@@ -188,27 +188,27 @@ class ListProjectPage
 
 declare(strict_types=1);
 
-namespace App\Actions\Projects;
+namespace App\Actions\Posts;
 
-use App\Http\Requests\Project\StoreProjectRequest;
-use App\Models\Project;
+use App\Http\Requests\Post\StorePostRequest;
+use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 use Lorisleiva\Actions\Concerns\AsController;
 use Symfony\Component\HttpFoundation\Response;
 
-class StoreProjectPage
+class StorePostPage
 {
     use AsController;
 
-    public function handle(StoreProjectRequest $request): Response
+    public function handle(StorePostRequest $request): Response
     {
-        Project::query()->create([
+        Post::query()->create([
             ...$request->validated(),
-            'owner_id' => Auth::id(),
+            'author_id' => Auth::id(),
         ]);
 
-        return Inertia::location(route('projects.create'));
+        return Inertia::location(route('post.create'));
     }
 }
 ```
@@ -220,9 +220,9 @@ class StoreProjectPage
 
 declare(strict_types=1);
 
-namespace App\Actions\Tags;
+namespace App\Actions\Tag;
 
-use App\Enums\TagTypeEnum;
+use App\Enums\TagEnum;
 use App\Models\Tag;
 use Illuminate\Support\Str;
 use Lorisleiva\Actions\Concerns\AsObject;
@@ -231,7 +231,7 @@ class CreateTag
 {
     use AsObject;
 
-    public function handle(string $tag, TagTypeEnum $type): Tag
+    public function handle(string $tag, TagEnum $type): Tag
     {
         $normalizedTag = Str::lower(mb_trim($tag));
 
@@ -251,7 +251,7 @@ class CreateTag
     }
 }
 
-// Usage: CreateTag::run($tagName, TagTypeEnum::Skill);
+// Usage: CreateTag::run($tagName, TagEnum::Skill);
 ```
 
 ### Vue Page Component (JavaScript)
@@ -262,7 +262,7 @@ import { Head, useForm } from '@inertiajs/vue3'
 import { route } from 'ziggy-js'
 
 const props = defineProps({
-    programs: Object,
+    posts: Object,
     flash: Object,
 })
 
@@ -272,14 +272,14 @@ const form = useForm({
 })
 
 function submit() {
-    form.post(route('projects.store'), {
+    form.post(route('posts.store'), {
         onSuccess: () => form.reset(),
     })
 }
 </script>
 
 <template>
-    <Head title="Projects" />
+    <Head title="Posts" />
 
     <div v-if="flash?.success" class="bg-green-100 p-4 rounded">
         {{ flash.success }}
@@ -289,7 +289,7 @@ function submit() {
         <input
             v-model="form.title"
             type="text"
-            placeholder="Project Title"
+            placeholder="Post Title"
         />
         <p v-if="form.errors.title" class="text-red-500">
             {{ form.errors.title }}
@@ -299,7 +299,7 @@ function submit() {
             type="submit"
             :disabled="form.processing"
         >
-            Create Project
+            Create Post
         </button>
     </form>
 </template>
@@ -316,7 +316,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-final class StoreProjectRequest extends FormRequest
+final class StorePostRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -359,8 +359,8 @@ return Inertia::render('Dashboard', [
 ```javascript
 import { router } from '@inertiajs/vue3'
 
-function refreshPrograms() {
-    router.reload({ only: ['programs'] })
+function refreshPosts() {
+    router.reload({ only: ['posts'] })
 }
 ```
 

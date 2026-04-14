@@ -17,7 +17,7 @@ Specialized AI agents that handle different aspects of development. Each agent h
 | `dba` | Database design, migrations, query optimization | sonnet | + | — |
 | `ddd-architect` | Domain modeling, business logic placement | opus | — | Context7, Agent |
 | `debugger` | Bug investigation, root-cause analysis | sonnet | + | — |
-| `developer` | Full-stack Laravel + Inertia.js features | opus | + | Context7, Figma, IDE, Agent |
+| `developer` | Full-stack Laravel + Inertia.js features | sonnet | + | Context7, Figma, IDE, Agent |
 | `devil` | Devil's advocate in planning phase, challenges requirements and architecture | opus | — | SendMessage only |
 | `devops` | Docker, deployment, infrastructure | sonnet | + | — |
 | `docs-writer` | Technical documentation, README, API docs | sonnet | + | GitHub MCP |

@@ -12,24 +12,24 @@ Specialized AI agents that handle different aspects of development. Each agent h
 
 | Agent | Purpose | Model | Write? | Key extras |
 |-------|---------|-------|--------|------------|
-| `ba` | Business analysis, requirements, user stories | opus | — | Web, Context7, Agent |
+| `ba` | Business analysis, requirements, user stories | sonnet | — | Web, Context7, Agent |
 | `ci-cd-engineer` | GitHub Actions, CI/CD pipelines | sonnet | + | GitHub MCP |
 | `dba` | Database design, migrations, query optimization | sonnet | + | — |
 | `ddd-architect` | Domain modeling, business logic placement | opus | — | Context7, Agent |
 | `debugger` | Bug investigation, root-cause analysis | sonnet | + | — |
 | `developer` | Full-stack Laravel + Inertia.js features | sonnet | + | Context7, Figma, IDE, Agent |
-| `devil` | Devil's advocate in planning phase, challenges requirements and architecture | opus | — | SendMessage only |
+| `devil` | Devil's advocate in planning phase, challenges requirements and architecture | sonnet | — | SendMessage only |
 | `devops` | Docker, deployment, infrastructure | sonnet | + | — |
 | `docs-writer` | Technical documentation, README, API docs | sonnet | + | GitHub MCP |
-| `filament` | Filament v4 admin panel resources | opus | + | Context7 |
-| `frontend` | Vue 3 components, Pinia, Tailwind, a11y | opus | + | Context7, Figma, Stitch, IDE |
+| `filament` | Filament v4 admin panel resources | sonnet | + | Context7 |
+| `frontend` | Vue 3 components, Pinia, Tailwind, a11y | sonnet | + | Context7, Figma, Stitch, IDE |
 | `integration-architect` | OAuth, webhooks, third-party services | sonnet | + | Web, Context7 |
-| `laravel-refactoring-expert` | Refactoring, N+1 fixes, code quality | opus | + | — |
-| `qa` | E2E testing, Playwright, visual regression | opus | + | All 21 Playwright tools |
+| `laravel-refactoring-expert` | Refactoring, N+1 fixes, code quality | sonnet | + | — |
+| `qa` | E2E testing, Playwright, visual regression | sonnet | + | All 21 Playwright tools |
 | `queue-specialist` | Redis queues, jobs, async processing | sonnet | + | — |
-| `reviewer` | Code review, architecture audit | opus | — | GitHub MCP (review) |
-| `security-scanner` | OWASP, auth/authz, credential leaks | opus | — | Web (CVE lookup) |
-| `tester` | Unit/feature tests, Pest, mutation testing | opus | + | — |
+| `reviewer` | Code review, architecture audit | sonnet | — | GitHub MCP (review) |
+| `security-scanner` | OWASP, auth/authz, credential leaks | sonnet | — | Web (CVE lookup) |
+| `tester` | Unit/feature tests, Pest, mutation testing | sonnet | + | — |
 
 ### Rules (5)
 

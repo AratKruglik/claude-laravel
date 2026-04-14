@@ -3,6 +3,18 @@ name: integration-architect
 description: "External service integration specialist. Use for designing API client wrappers, OAuth flows, webhook handlers, third-party service integrations, and troubleshooting integration failures. NOT for application code (developer) or tests (tester).\n\nTrigger words — EN: integrate, webhook, API client, external service, third-party, OAuth, SDK, integration, Socialite, payment gateway, WayForPay, media library, social login, Google login, GitHub login, callback, redirect, token, API key, HTTP client, retry, circuit breaker, rate limit, signature verification, idempotent, payload, external API, REST client, GraphQL client, file upload, avatar upload, media conversion, S3, storage, email service, notification service, SMS, push notification.\nTrigger words — UA: інтеграція, вебхук, зовнішній сервіс, API клієнт, підключити сервіс, OAuth, SDK, платіжний шлюз, WayForPay, медіа бібліотека, Socialite, соціальний логін, авторизація через Google, авторизація через GitHub, колбек, редірект, токен, API ключ, HTTP клієнт, повторна спроба, обмеження запитів, перевірка підпису, ідемпотентність, зовнішній API, завантаження файлів, завантаження аватарки, конвертація медіа, сховище, поштовий сервіс, сервіс сповіщень, підключити платіжку, налаштувати OAuth, зовнішня залежність, сторонній сервіс.\n\nExamples:\n\n<example>\nContext: User needs OAuth integration.\nuser: \"Add LinkedIn OAuth login\" / \"Додай авторизацію через LinkedIn\"\nassistant: \"I'll use the integration-architect agent to design the LinkedIn OAuth flow using Laravel Socialite.\"\n<commentary>\nOAuth integrations require understanding of Socialite and callback flows.\n</commentary>\n</example>\n\n<example>\nContext: User wants payment gateway.\nuser: \"Integrate WayForPay for payments\" / \"Підключи WayForPay для платежів\"\nassistant: \"I'll use the integration-architect agent to design the WayForPay integration with webhook handler and payment processing.\"\n<commentary>\nPayment gateway integration requires careful webhook and security design.\n</commentary>\n</example>\n\n<example>\nContext: User needs webhook handler.\nuser: \"Handle payment webhooks\" / \"Обробити вебхуки платежів\"\nassistant: \"I'll use the integration-architect agent to build an idempotent webhook handler with signature verification.\"\n<commentary>\nWebhook handlers need signature verification and idempotency.\n</commentary>\n</example>\n\n<example>\nContext: User has integration issues.\nuser: \"Google OAuth is broken\" / \"Google OAuth не працює\"\nassistant: \"I'll use the integration-architect agent to diagnose the Socialite Google OAuth flow and fix the issue.\"\n<commentary>\nIntegration debugging requires knowledge of external service patterns.\n</commentary>\n</example>\n\n<example>\nContext: Користувач хоче додати файлове завантаження.\nuser: \"Додай завантаження аватарки через Spatie Media Library\"\nassistant: \"I'll use the integration-architect agent to configure Spatie Media Library for avatar uploads with proper conversions.\"\n<commentary>\nMedia library integration involves configuration and conversion pipelines.\n</commentary>\n</example>"
 model: sonnet
 color: cyan
+tools:
+  - Read
+  - Glob
+  - Grep
+  - Edit
+  - Write
+  - Bash
+  - SendMessage
+  - WebSearch
+  - WebFetch
+  - mcp__context7__resolve-library-id
+  - mcp__context7__query-docs
 ---
 
 # Integration Architect — External Services Specialist

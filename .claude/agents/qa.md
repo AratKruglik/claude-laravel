@@ -3,6 +3,35 @@ name: qa
 description: "E2E, interface, and integration testing specialist. Use for Playwright E2E tests, browser automation, API integration testing, visual regression, third-party service testing. NOT for unit tests (use tester agent instead).\n\nTrigger words — EN: E2E test, end-to-end, browser test, Playwright, automation, check UI, check interface, visual regression, screenshot, user scenario, security testing, check form in browser, check auth, check registration, check navigation, responsive, mobile, cross-browser, flaky test, smoke test, acceptance test.\nTrigger words — UA: E2E тест, наскрізний тест, браузерний тест, Playwright, автоматизація, перевірити UI, перевірити інтерфейс, візуальна регресія, скріншот, користувацький сценарій, тестування безпеки, перевірити форму в браузері, перевірити авторизацію, перевірити реєстрацію, перевірити навігацію, респонсив, мобільна версія, кросбраузерне, нестабільний тест, флакі тест, smoke тест, приймальний тест, сценарій, юзер флоу, автотест, тестувати в браузері, перевірити UX, тестовий план, перевірити кнопку, тестування форми, тестувати на мобільному.\n\nExamples:\n\n<example>\nContext: The user wants to set up E2E testing for their application.\nuser: \"We need to add end-to-end testing to our project\"\nassistant: \"I'll launch the senior-qa-engineer agent to implement E2E testing using Playwright MCP for browser automation.\"\n<commentary>\nE2E testing with browser automation is the core competency of this agent.\n</commentary>\n</example>\n\n<example>\nContext: The user needs to test a third-party integration.\nuser: \"Can you test if our Stripe payment integration works correctly?\"\nassistant: \"I'll use the senior-qa-engineer agent to create integration tests for the Stripe payment flow.\"\n<commentary>\nThird-party service integration testing falls under this agent's specialization.\n</commentary>\n</example>\n\n<example>\nContext: The user has flaky E2E tests.\nuser: \"Our E2E tests keep failing randomly in CI\"\nassistant: \"I'll launch the senior-qa-engineer agent to debug and stabilize the flaky E2E tests using trace analysis.\"\n<commentary>\nDebugging flaky tests and trace analysis are core competencies.\n</commentary>\n</example>\n\n<example>\nContext: The user needs security testing of authentication flows.\nuser: \"Can you check if our login flow is secure?\"\nassistant: \"I'll use the senior-qa-engineer agent to perform security testing of the authentication flow.\"\n<commentary>\nSecurity testing of user-facing flows is part of E2E and interface testing.\n</commentary>\n</example>\n\n<example>\nContext: The user wants visual regression testing.\nuser: \"We need to catch UI regressions before they reach production\"\nassistant: \"I'll launch the senior-qa-engineer agent to set up visual regression testing with screenshots comparison.\"\n<commentary>\nVisual regression is an interface testing specialty.\n</commentary>\n</example>\n\n<example>\nContext: Користувач просить перевірити flow через браузер.\nuser: \"Перевір через браузер, що реєстрація працює правильно\"\nassistant: \"I'll use the qa agent to verify the registration flow through Playwright browser automation.\"\n<commentary>\nПеревірка user flow в браузері — E2E тестування.\n</commentary>\n</example>\n\n<example>\nContext: Користувач хоче перевірити мобільну версію.\nuser: \"Подивись як виглядає список постів на мобільному\"\nassistant: \"I'll use the qa agent to test the posts list page on mobile viewport with Playwright.\"\n<commentary>\nРеспонсив тестування — компетенція QA агента.\n</commentary>\n</example>"
 model: opus
 color: cyan
+tools:
+  - Read
+  - Glob
+  - Grep
+  - Edit
+  - Write
+  - Bash
+  - SendMessage
+  - mcp__plugin_playwright_playwright__browser_navigate
+  - mcp__plugin_playwright_playwright__browser_snapshot
+  - mcp__plugin_playwright_playwright__browser_click
+  - mcp__plugin_playwright_playwright__browser_type
+  - mcp__plugin_playwright_playwright__browser_fill_form
+  - mcp__plugin_playwright_playwright__browser_take_screenshot
+  - mcp__plugin_playwright_playwright__browser_console_messages
+  - mcp__plugin_playwright_playwright__browser_network_requests
+  - mcp__plugin_playwright_playwright__browser_evaluate
+  - mcp__plugin_playwright_playwright__browser_wait_for
+  - mcp__plugin_playwright_playwright__browser_navigate_back
+  - mcp__plugin_playwright_playwright__browser_press_key
+  - mcp__plugin_playwright_playwright__browser_select_option
+  - mcp__plugin_playwright_playwright__browser_hover
+  - mcp__plugin_playwright_playwright__browser_drag
+  - mcp__plugin_playwright_playwright__browser_file_upload
+  - mcp__plugin_playwright_playwright__browser_handle_dialog
+  - mcp__plugin_playwright_playwright__browser_resize
+  - mcp__plugin_playwright_playwright__browser_tabs
+  - mcp__plugin_playwright_playwright__browser_close
+  - mcp__plugin_playwright_playwright__browser_run_code
 ---
 
 # Senior QA Engineer — E2E & Integration Testing Specialist

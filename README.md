@@ -1,65 +1,73 @@
 # Claude Code Configuration for Laravel Projects
 
-A comprehensive, production-ready Claude Code configuration for Laravel + Inertia.js + Vue 3 projects. Includes 18 specialized agents, 5 rule files, 27 skills, and a structured workflow pipeline that turns Claude Code into a full AI development team.
+A comprehensive, production-ready Claude Code configuration for Laravel + Inertia.js + Vue 3 projects. Includes 17 specialized agents, 10 rule files, 23 skills, and a structured workflow pipeline that turns Claude Code into a full AI development team.
 
 **Stack:** PHP 8.4 · Laravel 12 · Vue 3 · Inertia.js v2 · PostgreSQL 17 · Redis · Docker · Pest 4
 
 ## What's Included
 
-### Agents (18)
+### Agents (17)
 
 Specialized AI agents that handle different aspects of development. Each agent has an explicit `tools:` list in its frontmatter — only the tools it actually needs (principle of least privilege).
 
 | Agent | Purpose | Model | Write? | Key extras |
 |-------|---------|-------|--------|------------|
 | `ba` | Business analysis, requirements, user stories | opus | — | Web, Context7, Agent |
-| `ci-cd-engineer` | GitHub Actions, CI/CD pipelines | sonnet | + | GitHub MCP |
 | `dba` | Database design, migrations, query optimization | sonnet | + | — |
 | `ddd-architect` | Domain modeling, business logic placement | opus | — | Context7, Agent |
-| `debugger` | Bug investigation, root-cause analysis | sonnet | + | — |
+| `debugger` | Bug investigation, root-cause analysis | opus | + | — |
 | `developer` | Full-stack Laravel + Inertia.js features | sonnet | + | Context7, Figma, IDE, Agent |
 | `devil` | Devil's advocate in planning phase, challenges requirements and architecture | opus | — | SendMessage only |
-| `devops` | Docker, deployment, infrastructure | sonnet | + | — |
-| `docs-writer` | Technical documentation, README, API docs | sonnet | + | GitHub MCP |
+| `devops` | Docker, CI/CD, deployment, GitHub Actions, infrastructure | haiku | + | GitHub MCP |
+| `docs-writer` | Technical documentation, README, API docs | haiku | + | GitHub MCP |
 | `filament` | Filament v4 admin panel resources | sonnet | + | Context7 |
 | `frontend` | Vue 3 components, Pinia, Tailwind, a11y | sonnet | + | Context7, Figma, Stitch, IDE |
 | `integration-architect` | OAuth, webhooks, third-party services | sonnet | + | Web, Context7 |
 | `laravel-refactoring-expert` | Refactoring, N+1 fixes, code quality | sonnet | + | — |
-| `qa` | E2E testing, Playwright, visual regression | opus | + | All 21 Playwright tools |
+| `qa` | E2E testing, Playwright, visual regression | sonnet | + | All 21 Playwright tools |
 | `queue-specialist` | Redis queues, jobs, async processing | sonnet | + | — |
 | `reviewer` | Code review, architecture audit | sonnet | — | GitHub MCP (review) |
-| `security-scanner` | OWASP, auth/authz, credential leaks | sonnet | — | Web (CVE lookup) |
+| `security-scanner` | OWASP, auth/authz, credential leaks | opus | — | Web (CVE lookup) |
 | `tester` | Unit/feature tests, Pest, mutation testing | sonnet | + | — |
 
-### Rules (5)
+### Rules (10)
 
-Auto-loaded rules that enforce project conventions:
+Rule files loaded by agents and orchestrator on demand:
 
 | Rule | Purpose |
 |------|---------|
 | `architecture.md` | Actions pattern, Inertia.js, domain organization |
 | `code-style.md` | PHP 8.4 strict types, Eloquent conventions, Pint/PHPStan/Rector |
+| `docker-commands.md` | Docker-prefixed commands reference |
+| `forms-authorization.md` | Form Request + Policy + authorization patterns |
 | `git-operations.md` | Commit/push safety, PR description format |
+| `inertia-vue.md` | Inertia v2 + Vue 3 Composition API conventions |
+| `mcp-stack.md` | MCP tool usage guide (Laravel Boost, Context7, GitHub, Figma) |
+| `migrations-queue.md` | Migration conventions, AsJob queue pattern |
 | `testing.md` | Pest 4, mutation testing, model testing policy |
-| `workflow.md` | Agent pipeline orchestration |
+| `workflow.md` | Agent pipeline orchestration + agent routing table |
 
-### Skills (27)
+Three files (`workflow.md`, `code-style.md`, `git-operations.md`) are auto-imported in `CLAUDE.md` via `@`-imports — always in context. The rest are loaded by agents on demand via reference links.
+
+### Skills (23)
 
 Reusable knowledge modules organized by category:
 
-**Laravel & PHP:** `laravel-specialist`, `laravel-coder`, `laravel-architecture`, `php-pro`
+**Laravel & PHP:** `laravel-architecture`, `php-pro`, `laravel-actions-patterns` *(custom)*
 
 **Testing:** `pest-testing`, `test-master`, `playwright-expert`, `playwright-skill`
 
-**Database:** `database-optimizer`, `postgresql`, `postgresql-optimization`, `postgres-best-practices`
+**Database:** `database-optimizer`, `postgresql`, `postgres-best-practices`
 
 **Architecture:** `architecture-designer`, `ddd-strategic-design`, `code-reviewer`, `architect-review`
 
-**DevOps:** `devops`, `docker-expert`, `github-actions`, `github-actions-templates`
+**DevOps:** `devops`, `docker-expert`, `github-actions`
 
 **Debugging & Security:** `debugging-wizard`, `security-reviewer`
 
-**API & Frontend:** `api-design-principles`, `vue-expert`, `vue-expert-js`
+**Frontend:** `vue-expert`
+
+**Infrastructure:** `octane-frankenphp-gotchas` *(custom)*
 
 **Planning:** `plan-writing`, `brainstorming`
 
@@ -70,7 +78,7 @@ The configuration defines a mandatory agent pipeline for feature development:
 ```
 Standard Feature:  Planning Team → Developer → Quality Gate Team → DocsWriter
 Bug Fix:           Debugger → Developer → Verify Team
-CI/CD:             DevOps / CI-CD Engineer → Reviewer + Security Scanner
+CI/CD:             DevOps → Reviewer + Security Scanner
 ```
 
 **Planning Team** (`plan-{slug}`) runs `ba`, `ddd-architect`, and `devil` in parallel. `devil` is a read-only devil's advocate that challenges requirements and architecture decisions via SendMessage before any code is written. For simple features with no arch decisions, `ba` runs sequentially alone.
@@ -200,7 +208,7 @@ Always define `tools:` explicitly — agents inherit ALL tools from the conversa
 - Read-only agents (analysts, auditors): omit `Edit`, `Write`, `Bash`
 - Agents that don't call external services: omit MCP tools
 - `qa` is the only agent that should get Playwright MCP tools
-- `reviewer`, `ci-cd-engineer`, `docs-writer` are the only agents that need GitHub MCP
+- `reviewer`, `devops`, `docs-writer` are the only agents that need GitHub MCP
 
 ### Add a New Rule
 

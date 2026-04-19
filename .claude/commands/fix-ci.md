@@ -134,7 +134,7 @@ If the debugger determined that a code fix is needed, launch the `developer` age
 The agent prompt must instruct the developer to:
 - Apply the minimal fix to resolve the CI failure
 - Follow project standards: `CLAUDE.md`, `.claude/rules/code-style.md`, `.claude/rules/architecture.md`
-- Use Actions pattern (not controllers), `getKey()` instead of `->id`, `query()` for model queries, `declare(strict_types=1)` in all PHP files
+- Follow project conventions: see @.claude/rules/code-style.md, @.claude/rules/architecture.md
 - For **lint failures**, run the relevant linter to verify the fix:
   ```bash
   docker compose exec app ./vendor/bin/phpstan analyse --memory-limit=2G

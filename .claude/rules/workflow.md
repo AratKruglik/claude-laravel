@@ -111,19 +111,19 @@ Same resolution rule: Critical/Important → back to phase 2. Max 2 retries.
 ## CI/CD Pipeline
 
 ```
-devops/ci-cd-engineer ══╗
-                        ║
-            ╔═══════════╩═══════════╗
-            ║    QG (infra) Team    ║
-            ║  reviewer | security  ║
-            ╚═══════════╤═══════════╝
-                        ║
-                      done
+devops ══╗
+         ║
+╔════════╩════════╗
+║  QG (infra)     ║
+║ reviewer|sec    ║
+╚════════╤════════╝
+         ║
+       done
 ```
 
 | Phase | Mode | Agent(s) | Output |
 |-------|------|----------|--------|
-| 1. Implementation | sequential | `devops` (infra) or `ci-cd-engineer` (GH Actions) | Config changes |
+| 1. Implementation | sequential | `devops` | Config changes |
 | 2. Quality Gate | **team** `qg-ci-{slug}` | `reviewer`, `security-scanner` | Review + security |
 
 No `tester` or `qa` for infra-only changes.
@@ -134,6 +134,28 @@ No `tester` or `qa` for infra-only changes.
 - **Lifecycle**: TeamCreate before phase → spawn teammates → collect results → shutdown → TeamDelete
 - **No chatter**: quality gate agents report independently, orchestrator reads all reports and decides
 - **Always cleanup**: TeamDelete after phase completes (pass or fail)
+
+## Agent Quick Routing
+
+| Need | Agent |
+|------|-------|
+| Backend + frontend full-stack | `developer` |
+| Pure Vue/CSS/Tailwind | `frontend` |
+| Unit/feature tests | `tester` |
+| E2E browser tests | `qa` |
+| Database schema + migrations | `dba` |
+| Code review | `reviewer` |
+| Bug investigation | `debugger` |
+| Security audit | `security-scanner` |
+| DDD / domain design | `ddd-architect` |
+| Filament admin panel | `filament` |
+| Integrations / OAuth / webhooks | `integration-architect` |
+| Queue jobs / async processing | `queue-specialist` |
+| DevOps / Docker / CI | `devops` |
+| Code refactoring / N+1 | `laravel-refactoring-expert` |
+| Business analysis / user stories | `ba` |
+| Challenge requirements | `devil` |
+| External docs / API / README | `docs-writer` |
 
 ## Tool API Reference
 

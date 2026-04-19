@@ -67,18 +67,7 @@ The agent prompt MUST include these rules:
 - Read the actual changed files from the local codebase (not just the diff) for full context
 - Return findings as a structured list with: file, line, severity, comment
 
-**Project-specific patterns to check:**
-- `declare(strict_types=1)` present in all PHP files
-- `getKey()` used instead of `->id` for model primary keys
-- `query()` used for model queries (not static `Model::where(...)`)
-- Laravel Actions pattern (lorisleiva/laravel-actions) — not traditional controllers
-- Form Requests used for all input validation
-- PHP 8.4+ features used where appropriate
-- PHPStan level 7 compatibility (no type errors, no unresolved calls)
-- Inertia.js props design — only necessary data passed to frontend
-- Vue 3 Composition API used (not Options API)
-- Pest BDD syntax: `describe()` + `it()` + `expect()`
-- Eager loading to prevent N+1 queries
+**Project-specific patterns to check:** see @.claude/rules/code-style.md, @.claude/rules/architecture.md, @.claude/rules/testing.md, @.claude/rules/inertia-vue.md
 
 ## Step 4: Post inline review comments
 

@@ -115,34 +115,7 @@ Run inside Claude Code:
 
 **Skills provided:** brainstorming, writing-plans, executing-plans, test-driven-development, systematic-debugging, requesting-code-review, verification-before-completion, using-git-worktrees, subagent-driven-development, finishing-a-development-branch
 
-### Step 3: Install Claude HUD Plugin
-
-[Claude HUD](https://github.com/jarrodwatts/claude-hud) adds a real-time statusline showing model, context usage, active tools, running agents, and task progress.
-
-**Requires:** Claude Code v1.0.80+, Node.js 18+
-
-Run inside Claude Code:
-
-```
-/plugin marketplace add jarrodwatts/claude-hud
-/plugin install claude-hud
-/claude-hud:setup
-```
-
-Customize display with `/claude-hud:configure` (choose Full, Essential, or Minimal preset).
-
-### Step 4: Install Mytets Plugin (Optional)
-
-[Mytets](https://github.com/rrader/mytets) adds a Ukrainian theatrical communication style inspired by Les Podervyansky. Activate with `/mytets:mytets-mode`.
-
-Run inside Claude Code:
-
-```
-/plugin marketplace add rrader/mytets
-/plugin install mytets
-```
-
-### Step 5: Install Additional Skills from skills.sh
+### Step 3: Install Additional Skills from skills.sh
 
 The configuration already includes 27 project skills in `.claude/skills/`. To install additional community skills from [skills.sh](https://skills.sh):
 

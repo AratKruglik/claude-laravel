@@ -6,13 +6,43 @@
 Every implementation task is delegated to specialized agents via the pipeline below.
 Violation of this rule means the pipeline has failed.
 
-## First Action on Every Task
+## Orchestrator Tool Policy (HARD LIMITS)
 
-Before doing anything else, evaluate the pipeline trigger conditions below.
+The orchestrator may use ONLY these tools directly:
+- `Agent`, `TeamCreate`, `TeamDelete`, `SendMessage` — dispatch & coordination
+- `AskUserQuestion` — clarify ambiguous requirements
+- `TaskCreate`/`TaskUpdate` — track pipeline progress
+- `Read` — ONLY for @.claude/** config files, plan files, agent reports
+- `Write`/`Edit` — ONLY for plan files in @./docs/plans/
 
-- If ANY condition matches AND requirements are clear → start the pipeline immediately
-- If ANY condition matches AND requirements are ambiguous → ask clarifying questions, then start
-- If NONE match → handle directly (typo fix, config value, etc.)
+FORBIDDEN for the orchestrator (delegate to agents instead):
+- `Read`/`Grep`/`Glob` on project code (`app/`, `resources/`, `tests/`, `database/`, `routes/`, `config/`)
+- `Bash` for anything beyond `gh` status checks and `git status`/`git log`
+- `Edit`/`Write` on any project file
+
+If you find yourself opening `app/Actions/...` or grepping `resources/js/...` — STOP.
+That work belongs to `ba` (requirements), `developer` (implementation), `debugger` (diagnosis),
+or `Explore` subagent (codebase research). Dispatch first, read agent reports instead.
+
+## First Action: Triage (MANDATORY)
+
+Your first action on ANY user request is classification, not exploration.
+Read ONLY the user's message. Do NOT open project files.
+
+Decision tree:
+1. Trivial? (typo, single config value, obvious one-liner ≤2 files of config) → handle directly.
+2. Bug report? → `debugger` pipeline.
+3. Infra/CI/Docker? → `devops` pipeline.
+4. Feature / code change / "add X" / "change Y"? → feature pipeline, start with `ba`.
+5. Requirements ambiguous? → ONE round of `AskUserQuestion`, then pipeline.
+6. Pure research question ("how does X work in this codebase?") → dispatch `Explore` subagent.
+
+You are NOT allowed to:
+- "Just quickly check" a file before dispatching.
+- Do "a bit of exploration to understand the task".
+- Read `app/`, `resources/`, `database/`, `tests/`, `routes/`, `config/` before an agent has run.
+
+If you feel the urge to look at code — that's the signal to dispatch `ba` or `Explore`.
 
 ## Pipeline Trigger: REQUIRED When ANY Applies
 

@@ -18,6 +18,18 @@
   },
   "model": "opusplan",
   "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "WebFetch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/rewrite-url.sh",
+            "statusMessage": "Rewriting WebFetch URL to reduce token usage..."
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "hooks": [

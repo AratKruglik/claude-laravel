@@ -1,0 +1,32 @@
+name: Validate JSON Configuration
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate settings.json
+        run: |
+          if [ -f .claude/settings.json ]; then
+            jq empty .claude/settings.json || (echo "Invalid JSON in .claude/settings.json" && exit 1)
+            echo "✅ .claude/settings.json is valid JSON"
+          else
+            echo "⚠️ .claude/settings.json not found"
+          fi
+
+      - name: Validate .mcp.json
+        run: |
+          if [ -f .mcp.json ]; then
+            jq empty .mcp.json || (echo "Invalid JSON in .mcp.json" && exit 1)
+            echo "✅ .mcp.json is valid JSON"
+          else
+            echo "⚠️ .mcp.json not found"
+          fi

@@ -5,7 +5,7 @@
   "enabledPlugins": {
     "superpowers@superpowers-marketplace": true
   },
-  "enabledMcpjsonServers": [
+  "enabledMcpServers": [
     "laravel-boost",
     "context7",
     "figma",

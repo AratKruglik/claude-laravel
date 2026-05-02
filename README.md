@@ -95,11 +95,17 @@ CI/CD:             DevOps → Reviewer + Security Scanner
 
 ### Step 1: Copy Configuration
 
-Clone this repository and copy the configuration files into your Laravel project:
+Run the automated installer script from the root of your Laravel project:
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/AratKruglik/claude-laravel/main/install.sh)"
+```
+
+Alternatively, you can install manually:
 
 ```bash
 # Clone the config repo
-git clone https://github.com/AlexGritsworker/claude-laravel.git /tmp/claude-laravel-config
+git clone https://github.com/AratKruglik/claude-laravel.git /tmp/claude-laravel-config
 
 # Copy into your project
 cp -r /tmp/claude-laravel-config/.claude /path/to/your-laravel-project/
